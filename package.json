@@ -1,0 +1,50 @@
+{
+  "name": "@keeex/pm2-status",
+  "version": "0.1.0",
+  "description": "Check some PM2 attributes from environment variables",
+  "main": "lib/pm2.js",
+  "scripts": {
+    "prepack": "npx grunt clean build"
+  },
+  "files": [
+    "lib/**/*",
+    "!lib/**/*.map"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeeeX/pm2-status.git"
+  },
+  "keywords": [
+    "pm2",
+    "log",
+    "environment",
+    "variable"
+  ],
+  "author": "KeeeX SAS",
+  "contributors": [
+    {
+      "name": "Gabriel Paul \"Cley Faye\" Risterucci",
+      "email": "gabriel@keeex.net"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KeeeX/pm2-status/issues"
+  },
+  "homepage": "https://github.com/KeeeX/pm2-status#readme",
+  "private": true,
+  "devDependencies": {
+    "@keeex/eslint-config": "^1.4.1",
+    "@types/node": "^15.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.26.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "grunt": "^1.4.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-ts": "^6.0.0-beta.22",
+    "load-grunt-tasks": "^5.1.0",
+    "typescript": "^4.2.4"
+  }
+}
