@@ -1,6 +1,6 @@
 {
   "name": "@keeex/pm2-status",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Check some PM2 attributes from environment variables",
   "main": "lib/pm2.js",
   "scripts": {
