@@ -1,5 +1,8 @@
 {
-  "ignoreBinaries": [],
+  "ignoreBinaries": [
+    "sonar-scanner",
+    "jq"
+  ],
   "ignoreDependencies": [],
   "rules": {
     "duplicates": "off"
