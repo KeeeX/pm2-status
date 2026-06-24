@@ -138,6 +138,12 @@
         "pm2.ts"
       ]
     },
+    "knip": {
+      "ignoreBinaries": [
+        "sonar-scanner",
+        "jq"
+      ]
+    },
     "testPattern": "none"
   },
   "type": "module",
