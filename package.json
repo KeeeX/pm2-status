@@ -127,7 +127,8 @@
     "clean": "tslib clean",
     "postpack": "clean-publish restore",
     "prepack": "tslib build && clean-publish cleanPublish",
-    "prepublishOnly": "publish_check"
+    "prepublishOnly": "publish_check",
+    "test": "echo \"No tests\""
   },
   "tslib": {
     "exports": {
