@@ -1,21 +1,41 @@
 {
   "compilerOptions": {
-    "incremental": true,
-    "target": "ES2019",
-    "module": "commonjs",
-    "lib": [],
-    "declaration": true,
-    "declarationMap": true,
-    "sourceMap": true,
-    "outDir": "./lib",
+    "incremental": false,
+    "composite": false,
+    "target": "esnext",
+    "lib": [
+      "ES2024",
+      "dom",
+      "dom.iterable",
+      "webworker"
+    ],
+    "module": "nodenext",
     "rootDir": "./src",
-    "tsBuildInfoFile": "./.tsbuildinfo",
+    "moduleResolution": "nodenext",
+    "declaration": true,
+    "declarationMap": false,
+    "emitDeclarationOnly": false,
+    "sourceMap": false,
+    "outDir": "./lib",
     "removeComments": false,
+    "resolveJsonModule": true,
+    "noEmit": true,
+    "emitBOM": false,
+    "newLine": "lf",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ]
   },
   "include": [
-    "./src/**/*.ts"
-  ]
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
+  "ts-node": {
+    "swc": true
+  }
 }

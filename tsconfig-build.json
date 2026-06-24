@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ],
+  "exclude": [],
+  "typedocOptions": {
+    "excludeInternal": true,
+    "excludePrivate": true,
+    "includeVersion": true,
+    "out": "apidoc",
+    "readme": "README.md",
+    "plugin": [
+      "typedoc-plugin-rename-defaults",
+      "typedoc-plugin-missing-exports"
+    ],
+    "entryPoints": [
+      "src"
+    ],
+    "entryPointStrategy": "expand"
+  }
+}

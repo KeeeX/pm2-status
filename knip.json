@@ -1,0 +1,7 @@
+{
+  "ignoreBinaries": [],
+  "ignoreDependencies": [],
+  "rules": {
+    "duplicates": "off"
+  }
+}
