@@ -70,5 +70,72 @@
       ]
     },
     "testPattern": "none"
+  },
+  "type": "module",
+  "version": "1.0.1",
+  "cleanPublish": {
+    "behavior": {
+      "cleanPublish": {
+        "package.json": {
+          "package": true,
+          "remove": [
+            "repository"
+          ],
+          "type": "json"
+        }
+      },
+      "cleanPrepack": {
+        "package.json": {
+          "add": {
+            "homepage": "https://keeex.me/oss"
+          },
+          "remove": [
+            "repository"
+          ],
+          "type": "json"
+        },
+        "README.md": {
+          "remove": [
+            "https://devtools.keeex.me",
+            "https://sast.keeex.me",
+            "https://cicd.keeex.me",
+            "https://forge.keeex.me",
+            "https://docs.keeex.me"
+          ],
+          "type": "text"
+        },
+        "sonar-project.properties": "remove"
+      },
+      "cleanSource": {
+        "package.json": {
+          "add": {
+            "homepage": "https://keeex.me/oss",
+            "scripts": {
+              "build": "tslib build",
+              "check": "tslib check",
+              "clean": "tslib clean",
+              "prepack": "npm run clean && npm run build",
+              "test": "tslib test"
+            }
+          },
+          "remove": [
+            "repository",
+            "cleanPublish"
+          ],
+          "type": "json"
+        },
+        "README.md": {
+          "remove": [
+            "https://devtools.keeex.me",
+            "https://sast.keeex.me",
+            "https://cicd.keeex.me",
+            "https://forge.keeex.me",
+            "https://docs.keeex.me"
+          ],
+          "type": "text"
+        },
+        "sonar-project.properties": "remove"
+      }
+    }
   }
 }
