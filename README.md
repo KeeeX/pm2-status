@@ -1,5 +1,5 @@
-@keeex/pm2-status
-=================
+# `@keeex/pm2-status`
+
 Detect if the current process is running under PM2 and provide some settings from it.
 
 This library provides three functions:
@@ -9,16 +9,16 @@ This library provides three functions:
   not applicable.
 - `isLogTimestamped()`: return true if running under PM2 and log timestamp is enabled
 
-Installation
-------------
+## Installation
+
 Install from `npmjs`:
 
 ```shell
 npm install @keeex/pm2-status
 ```
 
-Usage
------
+## Usage
+
 Import named functions from default export
 
 ```JavaScript
