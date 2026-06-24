@@ -128,6 +128,7 @@
     "postpack": "clean-publish restore",
     "prepack": "tslib build && clean-publish cleanPublish",
     "prepublishOnly": "publish_check",
+    "sonar": "npm run clean && sonar-scanner -DprojectVersion=$(jq .version package.json)",
     "test": "echo \"No tests\""
   },
   "tslib": {
