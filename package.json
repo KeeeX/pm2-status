@@ -83,7 +83,7 @@
   "description": "Check some PM2 attributes from environment variables",
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@keeex/clean-publish": "^1.5.7",
+    "@keeex/clean-publish": "^1.5.8",
     "@keeex/eslint-config": "^2.8.1",
     "@keeex/tslib": "^2.21.3",
     "@swc/core": "^1.16.2",
