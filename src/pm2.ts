@@ -21,3 +21,12 @@ export const isLogTimestamped = (): boolean => {
   const timeValue = process.env.time;
   return timeValue === "true";
 };
+
+/**
+ * Disconnect from PM2. Call this at the end of all processes that could be run under PM2.
+ * Safe to call even when not running under PM2.
+ */
+export const disconnectPm2 = (): void => {
+  /* eslint-disable-next-line @typescript-eslint/no-unnecessary-condition */
+  process.disconnect?.();
+};
