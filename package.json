@@ -128,7 +128,7 @@
     "postpack": "clean-publish restore",
     "prepack": "tslib build && clean-publish cleanPublish",
     "prepublishOnly": "publish_check",
-    "sonar": "npm run clean && sonar-scanner -DprojectVersion=$(jq .version package.json)",
+    "sonar": "npm run clean && sonar-scanner-npm -DprojectVersion=$(jq .version package.json)",
     "test": "echo \"No tests\""
   },
   "tslib": {
@@ -140,7 +140,7 @@
     },
     "knip": {
       "ignoreBinaries": [
-        "sonar-scanner",
+        "sonar-scanner-npm",
         "jq"
       ]
     },
