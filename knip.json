@@ -1,6 +1,6 @@
 {
   "ignoreBinaries": [
-    "sonar-scanner",
+    "sonar-scanner-npm",
     "jq"
   ],
   "ignoreDependencies": [],
