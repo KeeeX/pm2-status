@@ -9,7 +9,7 @@ const instanceVarName = process.env.instance_var ?? "NODE_APP_INSTANCE";
 export const getInstanceId = (): number | undefined => {
   const candidate = process.env[instanceVarName];
   if (!candidate) return;
-  return Number.parseInt(candidate);
+  return Number.parseInt(candidate, 10);
 };
 
 /** Return true if currently running under PM2 */
