@@ -32,7 +32,12 @@ if (isPM2()) {
 
 ## Disconnecting from PM2
 
-When your process is managed by PM2, you should call `disconnectPm2()` at the end of all processes that could be run under PM2. This function safely disconnects from PM2 and can be called in any case, even when not running under PM2.
+When a process is started by PM2, there is an IPC connection between the newly spawned process and PM2.
+This IPC channel can prevent shutdown.
+The `disconnectPm2()` function is provided to cut this IPC channel explicitely, but it's usage is discouraged.
+The recommended way to handle this situation is to rethrow the exception at top-level if it is handled by a `try-catch`.
+
+Note that calling this function _before_ the end of your process will instruct PM2 to consider the process dead
 
 ```JavaScript
 // Call this when your process is done
