@@ -34,8 +34,7 @@ if (isPM2()) {
 
 When a process is started by PM2, there is an IPC connection between the newly spawned process and PM2.
 This IPC channel can prevent shutdown.
-The `disconnectPm2()` function is provided to cut this IPC channel explicitely, but it's usage is discouraged.
-The recommended way to handle this situation is to rethrow the exception at top-level if it is handled by a `try-catch`.
+The `disconnectPm2()` function is provided to cut this IPC channel explicitely, and should be called when the process should exit unexpectedly, for example in a main try-catch.
 
 Note that calling this function _before_ the end of your process will instruct PM2 to consider the process dead
 
